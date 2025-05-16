@@ -54,19 +54,6 @@ public interface AutoWoodcuttingConfig extends Config {
         return false;
     }
 
-    @ConfigItem(
-            keyName = "Firemake",
-            name = "Firemake only",
-            description = "Turns into an Auto Firemaker only mode , start plugin initially at desired firemaking starting position , tested only at GE - North East ",
-            position = 3,
-            section = generalSection
-    )
-    default boolean firemakeOnly()
-    {
-        return false;
-    }
-
-
     @ConfigSection(
             name = "Reset",
             description = "Options for clearing logs from inventory",
@@ -96,7 +83,7 @@ public interface AutoWoodcuttingConfig extends Config {
     default String itemsToBank() {
         return "logs";
     }
-    
+
     @ConfigItem(
             keyName = "dropOrder",
             name = "Drop Order",
@@ -105,7 +92,7 @@ public interface AutoWoodcuttingConfig extends Config {
             section = resetSection
     )
     default InteractOrder interactOrder() {
-        return InteractOrder.STANDARD; 
+        return InteractOrder.STANDARD;
     }
 
     @ConfigItem(
